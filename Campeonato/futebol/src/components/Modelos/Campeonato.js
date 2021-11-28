@@ -2,7 +2,7 @@ import React from 'react'
 import FormCampeonato from '../Forms/FormCampeonato'
 import ListaCampeonato from '../Listagem/ListaCampeonato'
 import Axios from 'axios'
-import { Accordion, AccordionDetails, AccordionSummary, Grid } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary } from '@material-ui/core'
 import '../../index.css'
 
 export default class Campeonato extends React.Component {
@@ -13,7 +13,7 @@ export default class Campeonato extends React.Component {
         this.API_ENDPOINT = "http://localhost:8080/campeonato"
 
         this.state = {
-            "campeonato": [],
+            "Campeonato": [],
             "escolha": null
         }
     }
@@ -34,7 +34,7 @@ export default class Campeonato extends React.Component {
     }
 
     SaveCampeonato = (campeonato) => {
-        let res = Axios.post(this.API_ENDPOINT, campeonato)
+        let req = Axios.post(this.API_ENDPOINT, campeonato)
         req.then((res) => {
             if (res.status === 200) {
                 this.getAllCampeonato()
@@ -43,7 +43,7 @@ export default class Campeonato extends React.Component {
     }
 
     deleteCampeonato = (campeonatoid) => {
-        let res = Axios.delete(this.API_ENDPOINT + "/" + campeonatoid)
+        let req = Axios.delete(this.API_ENDPOINT + "/" + campeonatoid)
         req.then((res) => {
             if (res.status === 200) {
                 this.getAllCampeonato()
@@ -52,7 +52,7 @@ export default class Campeonato extends React.Component {
     }
 
     putCampeonato = (campeonato) => {
-        let res = Axios.put(this.API_ENDPOINT + "/" + this.state.escolha._id, campeonato)
+        let req = Axios.put(this.API_ENDPOINT + "/" + this.state.escolha._id, campeonato)
         req.then((res) => {
             if (res.status === 200) {
                 this.getAllCampeonato()

@@ -1,5 +1,5 @@
 import React from 'react'
-import Jogador from '../Forms/FormJogador'
+import FormJogador from '../Forms/FormJogador'
 import ListaCampeonato from '../Listagem/ListaCampeonato'
 import Axios from 'axios'
 import { Accordion, AccordionDetails, AccordionSummary, Grid } from '@material-ui/core'
@@ -44,7 +44,7 @@ export default class Jogador extends React.Component{
     }
 
     deleteJogador = (jogadorid) => {
-        let jogador = Axios.delete(this.API_ENDPOINT + "/" + jogadorid)
+        let req = Axios.delete(this.API_ENDPOINT + "/" + jogadorid)
         req.then((res) => {
             if(res.status === 200){
                 this.getAllJogador()
@@ -62,7 +62,7 @@ export default class Jogador extends React.Component{
     }
 
     selectJogador = (jogador) => {
-        if(this.state.escolha == jogador){
+        if(this.state.escolha === jogador){
             this.setState({
                 "escolha": null
             })

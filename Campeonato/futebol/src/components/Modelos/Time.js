@@ -1,5 +1,5 @@
 import React from 'react'
-import Time from '../Forms/FormTime'
+import FormTime from '../Forms/FormTime'
 import ListaCampeonato from '../Listagem/ListaCampeonato'
 import Axios from 'axios'
 import { Accordion, AccordionDetails, AccordionSummary, Grid } from '@material-ui/core'
@@ -44,7 +44,7 @@ export default class Time extends React.Component{
     }
 
     deletetime = (timeid) => {
-        let req = Axios.delete(this.API_ENDPOINT + "/" + timeid)
+        var req= Axios.delete(this.API_ENDPOINT + "/" + timeid)
         req.then((res) => {
             if(res.status === 200){
                 this.getAllTime()
