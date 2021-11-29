@@ -1,6 +1,6 @@
 import React from 'react'
 import FormCampeonato from '../Forms/FormCampeonato'
-import ListaCampeonato from '../Listagem/ListaCampeonato'
+import ListaFutebol from '../Listagem/ListaFutebol'
 import Axios from 'axios'
 import { Accordion, AccordionDetails, AccordionSummary } from '@material-ui/core'
 import '../../index.css'
@@ -92,12 +92,12 @@ export default class Campeonato extends React.Component {
                         <AccordionSummary>
                             <h3>Campeonato</h3>
                         </AccordionSummary>
-                        <AccordionDetails class="edit-campeonato">
-                                <ListaCampeonato
+                        <AccordionDetails class="edit-futebol">
+                                <ListaFutebol
                                     dados={this.state.campeonato}
                                     delete={this.deleteCampeonato}
                                     select={this.selectCampeonato}
-                                ></ListaCampeonato>
+                                ></ListaFutebol>
                         </AccordionDetails>
                     </Accordion>
                 </section>

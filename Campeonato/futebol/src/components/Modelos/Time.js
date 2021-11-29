@@ -1,6 +1,6 @@
 import React from 'react'
 import FormTime from '../Forms/FormTime'
-import ListaCampeonato from '../Listagem/ListaCampeonato'
+import ListaFutebol from '../Listagem/ListaFutebol'
 import Axios from 'axios'
 import { Accordion, AccordionDetails, AccordionSummary, Grid } from '@material-ui/core'
 import '../../index.css'
@@ -93,12 +93,12 @@ export default class Time extends React.Component{
                     <AccordionSummary>
                         <h3>Times</h3>
                         </AccordionSummary>
-                        <AccordionDetails class="edit-campeonato">
-                        <ListaCampeonato
+                        <AccordionDetails class="edit-futebol">
+                        <ListaFutebol
                             dados={this.state.time}
                             delete={this.deletetime}
                             select={this.selectime}
-                        ></ListaCampeonato>
+                        ></ListaFutebol>
                         </AccordionDetails>
                         </Accordion>
                     </section>

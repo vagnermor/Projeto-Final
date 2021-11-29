@@ -2,7 +2,7 @@ import './App.css';
 import Jogador from "./components/Modelos/Jogador";
 import Time from './components/Modelos/Time'
 import Campeonato from './components/Modelos/Campeonato'
-import { Container, Accordion, AccordionDetails, Grid, Card } from '@material-ui/core'
+import { Container, Card } from '@material-ui/core'
 
 
 function App() {

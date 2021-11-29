@@ -1,6 +1,6 @@
 import React from 'react'
 import FormJogador from '../Forms/FormJogador'
-import ListaCampeonato from '../Listagem/ListaCampeonato'
+import ListaFutebol from '../Listagem/ListaFutebol'
 import Axios from 'axios'
 import { Accordion, AccordionDetails, AccordionSummary, Grid } from '@material-ui/core'
 import '../../index.css'
@@ -94,12 +94,12 @@ export default class Jogador extends React.Component{
                     <AccordionSummary>
                         <h3>Jodadores</h3>
                         </AccordionSummary>
-                        <AccordionDetails class="edit-campeonato">
-                        <ListaCampeonato
+                        <AccordionDetails class="edit-fubebol">
+                        <ListaFutebol
                             dados={this.state.jogador}
                             delete={this.deleteJogador}
                             select={this.selectJogador}
-                        ></ListaCampeonato>
+                        ></ListaFutebol>
                         </AccordionDetails>
                         </Accordion>
                     </section>

@@ -2,13 +2,14 @@ import React from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Button, Grid } from '@material-ui/core'
 import '../../index.css'
 
-export default class ListaCampeonato extends React.Component {
+export default class ListaFutebol extends React.Component {
 
     render() {
-        var lista = this.props.dados
-        lista = lista.map((item) => {
+               
+        let lista = this.props.lista. map(item => {
+       
             return <li key={item._id}>
-                <Grid container class="edit-campeonato">
+                <Grid container class="edit-futebol">
                     <Accordion>
                         <AccordionSummary>
                             <h3>{item.campeonato}</h3>
